@@ -80,6 +80,12 @@ exploitation -> 開發 -> 收斂到best action、但有可能就只收斂到loca
 ```
 
 # Experiments
+## 31601(50102)
+## 33101(50104)
+## 40301(50103)
+## 40901(50105)
+## 42301(50601)
+
 50102:memory_size = 50000，replace_target_iter=1000
 50103:memory_size=200000
 50104:--
