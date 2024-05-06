@@ -49,7 +49,11 @@ for episode in range(Max_step):
   - Frame Stacking(幀疊加):一次疊加4幀畫面
 
 ## 2.Qnet
-![](Readme_img/Qnet_structure.png)
+[]("Readme_img/Qnet_structure.png")
+1. 三個卷積層：每個卷積層使用不同的kernel_size和stride，並且後面都接著ReLU激活函數。
+(input_channels,out_channels,kernel_size,stride)分別為(4,32,8,4)、(32,64,4,2)、(64,64,3,1)。
+2. 兩個全連接層：第一個全連接層的輸入大小由卷積層的輸出大小計算得到，為conv_out_size；輸出大小為512。第二個全連接層的輸入大小為512，輸出大小為n_actions。
+
 
 ## 3.DQN
   $Q_{target} ​(s,a)=r + (1−done) \cdot γ \cdot max_{a′}\ Q_{target}​​(s′,a′)$
