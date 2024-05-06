@@ -26,7 +26,8 @@ for episode in range(Max_step):
   while True:
     action=self.choose_action(state) #RL演算法
     state_next,reward,ter,tru,info=env.step(action)
-    #ter->terminated 遊戲成功或失敗，tru->truncated 是否超過遊戲限制(ex:超時、超步數)，info->除了state以外的其他資訊
+    #ter->terminated 遊戲成功或失敗，tru->truncated 是否超過遊戲限制(ex:超時、超步數)
+    #info->除了state以外的其他資訊
 
     self.store_transition(state, action, reward, state_next, ter) #儲存狀態
     if total_step > 4*self.batch_size: #蒐集一定步數後才開始訓練
@@ -48,6 +49,7 @@ for episode in range(Max_step):
   - Frame Stacking(幀疊加):一次疊加4幀畫面
 
 ## 2.Qnet
+![](Readme_img/Qnet.png)
 
 ## 3.DQN
   deep Q-learning with experience replay
