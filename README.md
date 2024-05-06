@@ -52,10 +52,15 @@ for episode in range(Max_step):
 ## 3.DQN
   deep Q-learning with experience replay
 
-  q-vaule q-target
+  q-vaule qnet_target
 
 ## 4.main loop
 
 # Hyperparameters
+- learning_rate = 2e-4
+- reward_decay = 0.99
+- replace_target_iter = 5000 steps (更新 qnet_target網路的頻率)
+- memory_size = 100000 (回放資料大小)
+- batch_size = 32
 
 # Experiments
