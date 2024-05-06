@@ -49,7 +49,7 @@ for episode in range(Max_step):
   - Frame Stacking(幀疊加):一次疊加4幀畫面
 
 ## 2.Qnet
-![](Readme_img/Qnet.png)
+![](Readme_img/Qnet_structure.png)
 
 ## 3.DQN
   deep Q-learning with experience replay
