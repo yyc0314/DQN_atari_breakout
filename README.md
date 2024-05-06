@@ -52,6 +52,8 @@ for episode in range(Max_step):
 ![](Readme_img/Qnet_structure.png)
 
 ## 3.DQN
+  $Q_{target} ​(s,a)=r + (1−done) \cdot γ \cdot max_{a′}\ Q_{target}​​(s′,a′)$
+  
   deep Q-learning with experience replay
 
   q-vaule qnet_target
@@ -65,4 +67,21 @@ for episode in range(Max_step):
 - memory_size = 100000 (回放資料大小)
 - batch_size = 32
 
+## e-greedy exploration
+```python
+epsilon_min + (epsilon_max - epsilon_min) * np.exp(-frame_id / epsilon_decay)
+```
+- epsilon_max: 1.0
+- epsilon_min: 0.05
+- epsilon_decay: 400000
+```
+exploration -> 探索 -> 隨機採取random action、但有可能無法收斂
+exploitation -> 開發 -> 收斂到best action、但有可能就只收斂到local minimum
+```
+
 # Experiments
+50102:memory_size = 50000，replace_target_iter=1000
+50103:memory_size=200000
+50104:--
+50105:reward-=上次
+50601:total_step%4==0
