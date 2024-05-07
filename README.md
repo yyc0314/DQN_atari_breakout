@@ -114,7 +114,7 @@ exploitation -> 開發 -> 收斂到best action、但有可能就只收斂到loca
 |--|--|--|
 |<img src="img/40301/40301_tdloss.png" width="400"/>|<img src="img/40301/40301_score.png" width="400"/>|<img src="img/40301/40301_aver_100_score.png" width="400"/>|
 
-## 40901(50105)
+## 40701(50105)
 |改變條件|方法|
 |--|--|
 |失命reward扣分|-=上次得分(>0)|
@@ -122,13 +122,24 @@ exploitation -> 開發 -> 收斂到best action、但有可能就只收斂到loca
 - 訓練次數:8000000
 - max_scroe:41
 
+
+|average td-loss(100 steps)|score(each episode)|average score(100 episodes)|
+|--|--|--|
+|<img src="img/40701/40701_tdloss.png" width="400"/>|<img src="img/40701/40701_score.png" width="400"/>|<img src="img/40701/40701_aver_100_score.png" width="400"/>|
+
+
 ## 42301(50601)
 |改變條件|方法|
 |--|--|
 |神經網路更新頻率|total_step%4==0|
 
-- 訓練次數:8000000
-- max_scroe:65
+- 訓練次數:5500000
+- max_scroe:80
+- 
+|average td-loss(100 steps)|score(each episode)|average score(100 episodes)|
+|--|--|--|
+|<img src="img/42301/42301_tdloss.png" width="400"/>|<img src="img/42301/42301_score.png" width="400"/>|<img src="img/42301/42301_aver_100_score.png" width="400"/>|
+
 
 # Referance
 - "Playing atari with deep reinforcement learning". Mnih, Volodymyr, Kavukcuoglu, Koray, Silver, David, Graves, Alex, Antonoglou, Ioannis, Wierstra, Daan, and Riedmiller, Martin. In NIPS Deep Learning Workshop. 2013. [Link](https://arxiv.org/abs/1312.5602)
