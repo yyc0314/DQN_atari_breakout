@@ -49,11 +49,10 @@ for episode in range(Max_step):
   - Frame Stacking(幀疊加):一次疊加4幀畫面
 
 ## 2.Qnet
-[]("Readme_img/Qnet_structure.png")
 1. 三個卷積層：每個卷積層使用不同的kernel_size和stride，並且後面都接著ReLU激活函數。
 (input_channels,out_channels,kernel_size,stride)分別為(4,32,8,4)、(32,64,4,2)、(64,64,3,1)。
 2. 兩個全連接層：第一個全連接層的輸入大小由卷積層的輸出大小計算得到，為conv_out_size；輸出大小為512。第二個全連接層的輸入大小為512，輸出大小為n_actions。
-
+![image](https://github.com/yyc0314/DQN_atari_breakout/blob/328883805562107f9e8e9d8588180c0b402a6580/img/Qnet_structure.png)
 
 ## 3.DQN
   $Q_{target} ​(s,a)=r + (1−done) \cdot γ \cdot max_{a′}\ Q_{target}​​(s′,a′)$
@@ -93,6 +92,9 @@ exploitation -> 開發 -> 收斂到best action、但有可能就只收斂到loca
 - 訓練次數:8000000
 - max_scroe:41
 
+|average td-loss(100 steps)|score(each episode)|average score(100 episodes)|
+|--|--|--|
+|<img src="img/31601/31601_tdloss.png" width="400"/>|<img src="img/31601/31601_score.png" width="400"/>|<img src="img/31601/31601_aver_100_score.png" width="400"/>|
 
 ## 33101(50104)
 與Hyperparameters所列之參數相同
@@ -108,8 +110,12 @@ exploitation -> 開發 -> 收斂到best action、但有可能就只收斂到loca
 - 訓練次數:7000000
 - max_scroe:47
 
+|average td-loss(100 steps)|score(each episode)|average score(100 episodes)|
+|--|--|--|
+|<img src="img/40301/40301_tdloss.png" width="400"/>|<img src="img/40301/40301_score.png" width="400"/>|<img src="img/40301/40301_aver_100_score.png" width="400"/>|
+
 ## 40901(50105)
-|改變條件|數值|
+|改變條件|方法|
 |--|--|
 |失命reward扣分|-=上次得分(>0)|
 
@@ -117,15 +123,14 @@ exploitation -> 開發 -> 收斂到best action、但有可能就只收斂到loca
 - max_scroe:41
 
 ## 42301(50601)
-|改變條件|數值|
+|改變條件|方法|
 |--|--|
 |神經網路更新頻率|total_step%4==0|
 
 - 訓練次數:8000000
 - max_scroe:65
 
-50102:memory_size = 50000，replace_target_iter=1000
-50103:memory_size=200000
-50104:--
-50105:reward-=上次
-50601:total_step%4==0
+# Referance
+- "Playing atari with deep reinforcement learning". Mnih, Volodymyr, Kavukcuoglu, Koray, Silver, David, Graves, Alex, Antonoglou, Ioannis, Wierstra, Daan, and Riedmiller, Martin. In NIPS Deep Learning Workshop. 2013. [Link](https://arxiv.org/abs/1312.5602)
+- [breakout-Deep-Q-Network](https://github.com/yyc0314/breakout-Deep-Q-Network)
+- [DQN-Atari-Breakout](https://github.com/yyc0314/DQN-Atari-Breakout)
