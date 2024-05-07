@@ -84,11 +84,45 @@ exploitation -> 開發 -> 收斂到best action、但有可能就只收斂到loca
 ```
 
 # Experiments
-## 31601(50102)
+## 31601(50102):
+|改變參數|數值|
+|--|--|
+|memory_size|50000|
+|replace_target_iter|1000|
+
+- 訓練次數:8000000
+- max_scroe:41
+
+
 ## 33101(50104)
+與Hyperparameters所列之參數相同
+
+- 訓練次數:8000000
+- max_scroe:57
+
 ## 40301(50103)
+|改變參數|數值|
+|--|--|
+|memory_size|200000|
+
+- 訓練次數:7000000
+- max_scroe:47
+
 ## 40901(50105)
+|改變條件|數值|
+|--|--|
+|失命reward扣分|-=上次得分(>0)|
+
+- 訓練次數:8000000
+- max_scroe:41
+
 ## 42301(50601)
+|改變條件|數值|
+|--|--|
+|神經網路更新頻率|total_step%4==0|
+
+- 訓練次數:8000000
+- max_scroe:65
 
 50102:memory_size = 50000，replace_target_iter=1000
 50103:memory_size=200000
