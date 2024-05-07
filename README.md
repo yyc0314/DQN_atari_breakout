@@ -85,7 +85,7 @@ exploitation -> 開發 -> 收斂到best action、但有可能就只收斂到loca
 ```
 
 # Experiments
-## 31601(50102):
+## 31601
 |改變參數|數值|
 |--|--|
 |memory_size|50000|
@@ -98,7 +98,7 @@ exploitation -> 開發 -> 收斂到best action、但有可能就只收斂到loca
 |--|--|--|
 |<img src="img/31601/31601_tdloss.png" width="400"/>|<img src="img/31601/31601_score.png" width="400"/>|<img src="img/31601/31601_aver_100_score.png" width="400"/>|
 
-## 33101(50104)
+## 33101
 與Hyperparameters所列之參數相同
 
 - 訓練次數:8250000
@@ -109,7 +109,7 @@ exploitation -> 開發 -> 收斂到best action、但有可能就只收斂到loca
 |<img src="img/33101/33101_tdloss.png" width="400"/>|<img src="img/33101/33101_score.png" width="400"/>|<img src="img/33101/33101_aver_100_score.png" width="400"/>|
 
 
-## 40301(50103)
+## 40301
 |改變參數|數值|
 |--|--|
 |memory_size|200000|
@@ -121,7 +121,7 @@ exploitation -> 開發 -> 收斂到best action、但有可能就只收斂到loca
 |--|--|--|
 |<img src="img/40301/40301_tdloss.png" width="400"/>|<img src="img/40301/40301_score.png" width="400"/>|<img src="img/40301/40301_aver_100_score.png" width="400"/>|
 
-## 40701(50105)
+## 40701
 |改變條件|方法|
 |--|--|
 |失命reward扣分|-=上次得分(>0)|
@@ -134,7 +134,7 @@ exploitation -> 開發 -> 收斂到best action、但有可能就只收斂到loca
 |<img src="img/40701/40701_tdloss.png" width="400"/>|<img src="img/40701/40701_score.png" width="400"/>|<img src="img/40701/40701_aver_100_score.png" width="400"/>|
 
 
-## 42301(50601)
+## 42301
 |改變條件|方法|
 |--|--|
 |神經網路更新頻率|total_step%4==0|
