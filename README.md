@@ -3,6 +3,8 @@
 
 利用pytorch實作DQN在atari的breakout遊戲。
 
+![gif](img/train42301_3120000.gif)
+
 # Environment
 ## 1.套件安裝
 - ``!pip install atari-py==0.2.6``
@@ -99,8 +101,13 @@ exploitation -> 開發 -> 收斂到best action、但有可能就只收斂到loca
 ## 33101(50104)
 與Hyperparameters所列之參數相同
 
-- 訓練次數:8000000
+- 訓練次數:8250000
 - max_scroe:57
+
+|average td-loss(100 steps)|score(each episode)|average score(100 episodes)|
+|--|--|--|
+|<img src="img/33101/33101_tdloss.png" width="400"/>|<img src="img/33101/33101_score.png" width="400"/>|<img src="img/33101/33101_aver_100_score.png" width="400"/>|
+
 
 ## 40301(50103)
 |改變參數|數值|
@@ -108,7 +115,7 @@ exploitation -> 開發 -> 收斂到best action、但有可能就只收斂到loca
 |memory_size|200000|
 
 - 訓練次數:7000000
-- max_scroe:47
+- max_score:47
 
 |average td-loss(100 steps)|score(each episode)|average score(100 episodes)|
 |--|--|--|
@@ -120,8 +127,7 @@ exploitation -> 開發 -> 收斂到best action、但有可能就只收斂到loca
 |失命reward扣分|-=上次得分(>0)|
 
 - 訓練次數:8000000
-- max_scroe:41
-
+- max_score:41
 
 |average td-loss(100 steps)|score(each episode)|average score(100 episodes)|
 |--|--|--|
@@ -135,7 +141,7 @@ exploitation -> 開發 -> 收斂到best action、但有可能就只收斂到loca
 
 - 訓練次數:5500000
 - max_scroe:80
-- 
+
 |average td-loss(100 steps)|score(each episode)|average score(100 episodes)|
 |--|--|--|
 |<img src="img/42301/42301_tdloss.png" width="400"/>|<img src="img/42301/42301_score.png" width="400"/>|<img src="img/42301/42301_aver_100_score.png" width="400"/>|
