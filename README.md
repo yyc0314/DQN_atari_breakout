@@ -69,13 +69,9 @@ for episode in range(Max_step):
   |--|--|--|--|
   |q_eval|計算當前動作的Q值、選擇最佳動作|每次learn|最佳化Q函數|
   |q_target|計算目標Q值|以replace_target_iter的頻率更新成q_eval|緩慢更新以減少訓練不穩定性|
+  *$Q_{target} ​(s,a)=r + (1−done) \cdot γ \cdot max_{a′}\ Q_{target}​​(s′,a′)$
 - experience replay:儲存過往訓練資料，並隨機抽樣訓練
-  
-  $Q_{target} ​(s,a)=r + (1−done) \cdot γ \cdot max_{a′}\ Q_{target}​​(s′,a′)$
-  
-  deep Q-learning with experience replay
-
-  q-vaule qnet_target
+- ε-greedy:以機率ε隨機選擇動作，1-ε的機率由q_eval中選擇最佳動作，使agent能在訓練初期進行探索，並持續收斂，在後期選擇最佳動作。
 
 ## 4.main loop
 
@@ -86,7 +82,7 @@ for episode in range(Max_step):
 - memory_size = 100000 (回放資料大小)
 - batch_size = 32
 
-## e-greedy exploration
+## ε-greedy exploration
 ```python
 epsilon_min + (epsilon_max - epsilon_min) * np.exp(-frame_id / epsilon_decay)
 ```
