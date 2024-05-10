@@ -57,6 +57,11 @@ for episode in range(Max_step):
 ![image](https://github.com/yyc0314/DQN_atari_breakout/blob/328883805562107f9e8e9d8588180c0b402a6580/img/Qnet_structure.png)
 
 ## 3.DQN
+  ### introduction
+    - 一種強化學習演算法
+    - 解決馬爾可夫決策過程（Markov Decision Process, MDP）問題
+    - 用神經網路模擬Q函數，衡量在狀態下採取某動作的價值
+    - 由Q值最大化，反映不同狀態中的最佳動作，以獲得最高獎勵。
   $Q_{target} ​(s,a)=r + (1−done) \cdot γ \cdot max_{a′}\ Q_{target}​​(s′,a′)$
   
   deep Q-learning with experience replay
@@ -83,6 +88,8 @@ epsilon_min + (epsilon_max - epsilon_min) * np.exp(-frame_id / epsilon_decay)
 exploration -> 探索 -> 隨機採取random action、但有可能無法收斂
 exploitation -> 開發 -> 收斂到best action、但有可能就只收斂到local minimum
 ```
+
+
 
 # Experiments
 ## 31601
@@ -141,6 +148,31 @@ exploitation -> 開發 -> 收斂到best action、但有可能就只收斂到loca
 
 - 訓練次數:5500000
 - max_scroe:80
+
+|average td-loss(100 steps)|score(each episode)|average score(100 episodes)|
+|--|--|--|
+|<img src="img/42301/42301_tdloss.png" width="400"/>|<img src="img/42301/42301_score.png" width="400"/>|<img src="img/42301/42301_aver_100_score.png" width="400"/>|
+
+## 50401
+|改變條件|方法|
+|--|--|
+|神經網路更新頻率|total_step%6==0|
+
+- 訓練次數:5500000
+- max_scroe:81
+
+|average td-loss(100 steps)|score(each episode)|average score(100 episodes)|
+|--|--|--|
+|<img src="img/42301/42301_tdloss.png" width="400"/>|<img src="img/42301/42301_score.png" width="400"/>|<img src="img/42301/42301_aver_100_score.png" width="400"/>|
+
+## 50801
+|改變條件|方法|
+|--|--|
+|神經網路更新頻率|total_step%4==0|
+|失命reward扣分|-=上次得分(>0)|
+
+- 訓練次數:5500000
+- max_scroe:174
 
 |average td-loss(100 steps)|score(each episode)|average score(100 episodes)|
 |--|--|--|
