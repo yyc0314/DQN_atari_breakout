@@ -67,11 +67,10 @@ for episode in range(Max_step):
 - 神經網路
   |網路|用途|更新頻率|原理|
   |--|--|--|--|
-  |q_eval|計算當前動作的Q值、選擇最佳動作|5|最佳化Q函數|
+  |q_eval|計算當前動作的Q值、選擇最佳動作|每次learn|最佳化Q函數|
   |q_target|計算目標Q值|以replace_target_iter的頻率更新成q_eval|緩慢更新以減少訓練不穩定性|
-  - q_eval:
-  - q_target:
 - experience replay:儲存過往訓練資料，並隨機抽樣訓練
+  
   $Q_{target} ​(s,a)=r + (1−done) \cdot γ \cdot max_{a′}\ Q_{target}​​(s′,a′)$
   
   deep Q-learning with experience replay
