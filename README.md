@@ -3,7 +3,7 @@
 
 利用pytorch實作DQN在atari的breakout遊戲。
 
-![gif](img/train42301_3120000.gif)
+<img src="img/high_score_279.gif" alt="gif" width="200"/>
 
 # Environment
 ## 1.套件安裝
@@ -69,7 +69,8 @@ for episode in range(Max_step):
   |--|--|--|--|
   |q_eval|計算當前動作的Q值、選擇最佳動作|每次learn|最佳化Q函數|
   |q_target|計算目標Q值|以replace_target_iter的頻率更新成q_eval|緩慢更新以減少訓練不穩定性|
-  *$Q_{target} ​(s,a)=r + (1−done) \cdot γ \cdot max_{a′}\ Q_{target}​​(s′,a′)$
+  
+  * $Q_{target} ​(s,a)=r + (1−done) \cdot γ \cdot max_{a′}\ Q_{target}​​(s′,a′)$
 - experience replay:儲存過往訓練資料，並隨機抽樣訓練
 - ε-greedy:以機率ε隨機選擇動作，1-ε的機率由q_eval中選擇最佳動作，使agent能在訓練初期進行探索，並持續收斂，在後期選擇最佳動作。
 
