@@ -57,11 +57,21 @@ for episode in range(Max_step):
 ![image](https://github.com/yyc0314/DQN_atari_breakout/blob/328883805562107f9e8e9d8588180c0b402a6580/img/Qnet_structure.png)
 
 ## 3.DQN
-  ### introduction
-    - 一種強化學習演算法
-    - 解決馬爾可夫決策過程（Markov Decision Process, MDP）問題
-    - 用神經網路模擬Q函數，衡量在狀態下採取某動作的價值
-    - 由Q值最大化，反映不同狀態中的最佳動作，以獲得最高獎勵。
+
+### introduction  
+- 一種強化學習演算法，應用於解決馬爾可夫決策過程（Markov Decision Process, MDP）問題
+- 用神經網路模擬Q函數，衡量在狀態下採取某動作的價值
+- 使用Q-learning更新神經網，透過Q值最大化，反映不同狀態中的最佳動作，以獲得更高的獎勵。
+
+### implementation
+- 神經網路
+  |網路|用途|2|3|4|更新頻率|原理|
+  |--|--|--|--|--|--|--|
+  |q_eval|計算當前動作的Q值、選擇最佳動作|2|3|4|5|最佳化Q函數|
+  |q_target|計算目標Q值|2|3|4|以replace_target_iter的頻率更新成q_eval|緩慢更新以減少訓練不穩定性|
+  - q_eval:
+  - q_target:
+- experience replay:儲存過往訓練資料，並隨機抽樣訓練
   $Q_{target} ​(s,a)=r + (1−done) \cdot γ \cdot max_{a′}\ Q_{target}​​(s′,a′)$
   
   deep Q-learning with experience replay
