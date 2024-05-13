@@ -169,7 +169,7 @@ exploitation -> 開發 -> 收斂到best action、但有可能就只收斂到loca
 
 |average td-loss(100 steps)|score(each episode)|average score(100 episodes)|
 |--|--|--|
-|<img src="img/50401/50401_tdloss.png" width="400"/>|<img src="img/50401/50401_score.png" width="400"/>|<img src="img/50401/50401_aver_100_score.png" width="400"/>|
+|<img src="img/50401/50401_tdloss.png" width="400"/>|<img src="img/50401/504_score.png" width="400"/>|<img src="img/50401/50401_aver_100_score.png" width="400"/>|
 
 ## 50801
 |改變條件|方法|
