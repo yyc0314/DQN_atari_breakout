@@ -3,7 +3,7 @@
 
 利用pytorch實作DQN在atari的breakout遊戲。
 
-<img src="img/high_score_279.gif" alt="gif" width="200"/>
+<img src="img/high_score_373.0.gif" alt="gif" width="200"/>
 
 # Environment
 ## 1.套件安裝
